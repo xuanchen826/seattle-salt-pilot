@@ -1,19 +1,43 @@
-# Seattle Salt Complaint Pilot
+# Seattle Salt Pilot
 
-> **21 "too salty" complaints** from **150 Seattle restaurants** using **Google Places API**.
+**Full-spectrum salt perception analysis** using Google Places API.
 
-## Key Findings
-- **Hit rate**: **1.4%** (vs. random ~0.25%)
-- **Pattern**: 95% in **3–4 star reviews** ("delicious but too salty")
-- **Hotspots**: Capitol Hill, Fremont (ramen, pho, seafood)
+> **17 salt-related comments** from 100 Seattle restaurants  
+> **Too salty**: 5 | **Not salty enough**: 3 | **Just right**: 9
+
+---
+
+## Result
+| Type | Count | % |
+|------|-------|---|
+| Too salty | 5 | 29% |
+| Not salty enough | 3 | 18% |
+| Just right | 9 | 53% |
+
+**Rate**: 1.7% of ~1,000 reviews mention salt.
+
+---
 
 ## Files
-- `seattle_salt_ultimate.py` – Final stable script (direct `reviews[:10]` fetch)
-- `seattle_salt_ultimate.xlsx` – 21 raw comments
+- `seattle_salt_full_spectrum.py` – Main script  
+- `seattle_salt_full_spectrum.xlsx` – 17 comments (Excel)  
+- `README.md` – This file
 
-## Reproduce
+---
+
+## How to Run
+
+### 1. Get Your **Free** Google Places API Key
+1. Go to [cloud.google.com](https://cloud.google.com)  
+2. Create a project → Enable **Places API**  
+3. Copy your **API key**  
+→ Free $200 credit/month (enough for 40,000+ requests)
+
+### 2. Set Up
 ```bash
+# Clone repo
+git clone https://github.com/xuanchen826/seattle-salt-pilot.git
+cd seattle-salt-pilot
+
+# Install dependencies
 pip install requests pandas tqdm
-python seattle_salt_ultimate.py
-# seattle-salt-pilot
-Pilot for salt-related sentiment analysis in Seattle restaurant reviews using Google Places API
