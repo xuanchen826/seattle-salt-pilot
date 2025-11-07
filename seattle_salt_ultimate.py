@@ -1,7 +1,7 @@
 import requests, re, pandas as pd, time, json, os
 from tqdm import tqdm
 
-API_KEY = 'AIzaSyCOEY-55qp1SArORJkXaE_l9SYLnpyubCw'
+API_KEY = 'use yours'
 PER_REGION = 30
 OUTPUT_XLSX = 'seattle_salt_ultimate.xlsx'
 OUTPUT_JSON = 'seattle_salt_ultimate_progress.json'
